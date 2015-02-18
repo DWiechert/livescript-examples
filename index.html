@@ -1,5 +1,6 @@
 <script type="text/javascript" src="scripts/livescript.js"></script>
 <script type="text/ls">
+# Functions
 times = (x, y) ->
     x * y
     
@@ -9,16 +10,40 @@ add = (x, y) ->
 console.log "boom #{window.location}"
 
 x = times 2, 3
-console.log x
+console.log "2 * 3 is #x"
 
 y = add 2, 3
-console.log y
+console.log "2 + 3 is #y"
+
+# Simple Objects
+obj = {x, y}
+console.log obj
+
+person =
+    age:       23
+    eye-color: "green"
+    height:    180cm
+console.log person
+
+# Simple Classes
+class A
+  (num) ->
+    @x = num
+  property: 1
+  method: (y) ->
+    @x + @property + y  
+
+a = new A 3
+console.log a.x
+console.log a.property
+val = a.method 6
+console.log val
+console.log a
 </script>
 <script>
     var LiveScript = require("LiveScript");
     LiveScript.go();
 </script>
-<script type="text/ls" src="scripts/functions.ls"></script>
 <html>
 <h1>Hello Livescript!</h1>
 </html>
